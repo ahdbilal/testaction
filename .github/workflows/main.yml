@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2
       - name: actor
         id: actor
-      - run:
+        run:
           echo "::set-output name=actor:"Bilal""
       - name: testaction
         uses: ahdbilal/testdocker@v0.1

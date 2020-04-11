@@ -8,10 +8,13 @@ jobs:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
-      - name: ac
-        id: actor
+      - name: actor
+        id: ac
         run:
           echo "::set-output name=actor:"Bilal""
+      - name: actor2
+        run:
+          echo "${{ steps.ac.outputs.actor }}"
       - name: testaction
         uses: ahdbilal/testdocker@v0.1
         with: 

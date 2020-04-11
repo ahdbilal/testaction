@@ -10,3 +10,5 @@ jobs:
         uses: actions/checkout@v2
       - name: testaction
         uses: ahdbilal/testdocker@v0.1
+        with: 
+          who-to-greet:: $GITHUB_ACTOR

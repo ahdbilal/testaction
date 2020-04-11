@@ -11,4 +11,4 @@ jobs:
       - name: testaction
         uses: ahdbilal/testdocker@v0.1
         with: 
-          who-to-greet: $GITHUB_ACTOR
+          who-to-greet: "$GITHUB_ACTOR"

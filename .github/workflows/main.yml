@@ -12,9 +12,6 @@ jobs:
         id: ac
         run:
           echo "::set-output name=actor::"Bilal""
-      - name: actor2
-        run:
-          echo "${{ steps.ac.outputs.actor }}"
       - name: testaction
         uses: ahdbilal/testdocker@v0.1
         with: 

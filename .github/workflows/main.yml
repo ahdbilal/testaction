@@ -11,8 +11,8 @@ jobs:
       - name: actor
         id: actor
         run:
-          echo "::set-output name=actor:"Bilal""
+          echo "::set-output name=actor:Bilal"
       - name: testaction
         uses: ahdbilal/testdocker@v0.1
         with: 
-          who-to-greet:  ${{ steps.actor.outputs.actor }}
+          who-to-greet:  "${{ steps.actor.outputs.actor }}"

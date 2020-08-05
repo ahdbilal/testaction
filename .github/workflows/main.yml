@@ -1,18 +1,15 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  job_1:
+    name: Add 3 and 7
     runs-on: ubuntu-latest
-    name: A job to say hello
     steps:
-      # To use this repository's private action, you must check out the repository
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: actor
-        id: ac
-        run:
-          echo "::set-output name=actor::"Bilal""
-      - name: testaction
-        uses: ahdbilal/testdocker@v0.1
-        with: 
-          who-to-greet:  "${{ steps.ac.outputs.actor }}"
+      - shell: bash
+        run: |
+          expr 3 + 7 > math-homework.txt
+      - name: Upload math result for job 1
+        uses: actions/upload-artifact@v2
+        with:
+          name: homework
+          path: math-homework.txt
